@@ -72,7 +72,6 @@ module.exports = {
 
 	onMouseUp: function() {
 		this.selected.isSelected = false;
-
 		this.selected = null;
 	},
 

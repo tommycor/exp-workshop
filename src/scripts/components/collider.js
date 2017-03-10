@@ -32,11 +32,7 @@ module.exports = class Collider{
 				director 	= diff.divide( new Victor( dist, dist ) );
 				force 		= (sumRadius - dist) * .5;
 
-				// if( force > 5) {
-				// 	force = 5;
-				// }
-
-				if( particle.isSelected ) {
+				if( particle.isSelected || force < 3 ) {
 					other.collision.add( director.multiply( new Victor( -force*2, -force*2 ) ) );
 				}
 				else if( other.isSelected ) {

@@ -33,8 +33,6 @@ module.exports = class Particle{
 
 	init() {
 		this.el.classList.add('particle');
-		console.log(this.color)
-		this.el.style.background = this.color;
 		this.container.appendChild( this.el );
 
 		this.update();

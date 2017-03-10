@@ -1377,11 +1377,7 @@ module.exports = (function () {
 					director = diff.divide(new _victor2['default'](dist, dist));
 					force = (sumRadius - dist) * .5;
 
-					// if( force > 5) {
-					// 	force = 5;
-					// }
-
-					if (particle.isSelected) {
+					if (particle.isSelected || force < 3) {
 						other.collision.add(director.multiply(new _victor2['default'](-force * 2, -force * 2)));
 					} else if (other.isSelected) {
 						particle.collision.add(director.clone().multiply(new _victor2['default'](force * 2, force * 2)));
@@ -1433,6 +1429,11 @@ module.exports = (function () {
 			var director = new _victor2['default'](0, 0);
 
 			dist = Math.abs(Math.sqrt(particle.position.x * particle.position.x + particle.position.y * particle.position.y));
+
+			if (dist < 3) {
+				return;
+			}
+
 			director = particle.position.clone().divide(new _victor2['default'](dist, dist));
 
 			particle.gravity.add(director.multiply(new _victor2['default'](force, force)));
@@ -1495,8 +1496,6 @@ module.exports = (function () {
 		key: 'init',
 		value: function init() {
 			this.el.classList.add('particle');
-			console.log(this.color);
-			this.el.style.background = this.color;
 			this.container.appendChild(this.el);
 
 			this.update();
@@ -1629,7 +1628,6 @@ module.exports = {
 
 	onMouseUp: function onMouseUp() {
 		this.selected.isSelected = false;
-
 		this.selected = null;
 	},
 
@@ -1667,7 +1665,7 @@ window.onload = function () {
 
 var config = {
 	nbrParticles: 10,
-	gravityForce: -2,
+	gravityForce: -3,
 	canvas: {
 		element: document.getElementById('container'),
 		color: 0x051023
