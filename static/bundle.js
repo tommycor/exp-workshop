@@ -1325,6 +1325,8 @@ function degrees2radian (deg) {
 }
 
 },{}],"D:\\Documents\\git\\exp-workshop\\src\\scripts\\components\\collider.js":[function(require,module,exports){
+// COLLIDER
+
 'use strict';
 
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -1394,6 +1396,8 @@ module.exports = (function () {
 })();
 
 },{"../utils/config":"D:\\Documents\\git\\exp-workshop\\src\\scripts\\utils\\config.js","victor":"D:\\Documents\\git\\exp-workshop\\node_modules\\victor\\index.js"}],"D:\\Documents\\git\\exp-workshop\\src\\scripts\\components\\gravity.js":[function(require,module,exports){
+// GRAVITY
+
 'use strict';
 
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -1423,6 +1427,7 @@ module.exports = (function () {
 			if (particle.isSelected) {
 				return;
 			}
+
 			var diff = 0;
 			var dist = 0;
 			var force = _utilsConfig2['default'].gravityForce;
@@ -1444,6 +1449,8 @@ module.exports = (function () {
 })();
 
 },{"../utils/config":"D:\\Documents\\git\\exp-workshop\\src\\scripts\\utils\\config.js","victor":"D:\\Documents\\git\\exp-workshop\\node_modules\\victor\\index.js"}],"D:\\Documents\\git\\exp-workshop\\src\\scripts\\components\\particle.js":[function(require,module,exports){
+// PARTICLE
+
 'use strict';
 
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -1531,6 +1538,8 @@ module.exports = (function () {
 })();
 
 },{"../utils/raf":"D:\\Documents\\git\\exp-workshop\\src\\scripts\\utils\\raf.js","../utils/transformer":"D:\\Documents\\git\\exp-workshop\\src\\scripts\\utils\\transformer.js","victor":"D:\\Documents\\git\\exp-workshop\\node_modules\\victor\\index.js"}],"D:\\Documents\\git\\exp-workshop\\src\\scripts\\components\\scene.js":[function(require,module,exports){
+// SCENE
+
 'use strict';
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }

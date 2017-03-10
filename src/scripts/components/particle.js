@@ -1,3 +1,5 @@
+// PARTICLE
+
 import Victor 		from 'victor';
 
 import raf 	  		from '../utils/raf';
